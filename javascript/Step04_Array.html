@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_Array.html</title>
+	<script>
+	var arr=[];
+	var arr2=[];
+	var nums=[10,20,30,40,50];
+	var names=["김구라","해골","원숭이","주뎅이","덩어리"];
+
+	//names배열에서 각각의 방 참조 해보기
+	var a=names[0];
+	var b=names[1];
+	names[2]="신현호";
+	names[3]="이주환";
+
+	//arr배열에 데이터 하나씩 넣어주기
+	arr[0]="하나";
+	arr[1]="두울";
+	arr[2]="세엣";
+	//arr배열의 방의 갯수 참조하기
+	var rooCount=arr.length;
+	//arr배열에서 1번방에서 부터 1개 삭제하기
+	arr.splice(1,1);//.splice(삭제할 방의 인덱스, 삭제할 갯수)
+
+	//arr2 배열에 데이터를 하나씩 누적 시키기
+	arr2.push("one");
+	arr2.push("two");
+	arr2.push("three");
+	arr2.push("four");
+	arr2.push("five");
+
+	//arr2 배열에서 데이터를 맨뒤에서 하나씩 삭제하기
+	arr2.pop();
+	arr2.pop();
+	var popedData=arr2.pop();//삭제한 데이터 변수에 담기
+
+	//arr2 배열초기화 하고 싶다면 간단히
+	//arr2=[];
+	//arr2.splice(0,arr2.length);
+
+	</script>
+</head>
+<body>
+	<h1>Array Type 사용해보기</h1>
+	<input type="text" id="inputText" placeholder="먹고 싶은거 입력"/>
+	<button onclick="save()">저장</button>
+	<script>
+	//먹고 싶은 음식정보를 담을 배열
+	var foodList=[];
+	//저장 버튼을 눌렀을때 호출되는 함수
+	var save=function(){
+		//입력한 문자열을 읽어온다.
+		var food=document.getElementById("inputText").value;
+		//배열에 누적시킨다.
+		foodList.push(food);
+		alert("저장 하였습니다.")
+	}
+
+	function save2(){
+		//입력한 문자열을 읽어온다.
+		var food=document.getElementById("inputText").value;
+		//배열에 누적시킨다.
+		foodList.push(food);
+		alert("저장 하였습니다.")
+	}
+	</script>
+</body>
+</html>

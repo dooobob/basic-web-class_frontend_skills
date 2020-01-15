@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_Manipulation.html</title>
+</head>
+<body>
+	<div class="container">
+		<input type="text" id="inputText"/>
+		<button id="addBtn">추가</button>
+		<br/>
+		<ul>
+			<li>하나</li>
+			<li>두울</li>
+		</ul>
+	</div>
+	<script src="js/jquery-1.11.2.js"></script>	
+	<script>	
+
+	(function(){
+		//버튼눌렀을때 실행할 함수 등록	
+		$("#addBtn").click(function(){	
+			send();
+		});
+
+		//$("#inputText").keyup(function(){});
+		$("#inputText").on("keyup",function(e){
+			//눌러진 키의 코드값을 읽어온다.
+			var code=e.keyCode;
+			//console.log(code);
+			//만일 엔터키를 눌렀다면(code==13)
+			if(code==13){
+			send();			
+			}
+		});
+
+		function send(){
+			//입력한 내용을 읽어온다.
+			var msg=$("#inputText").val();	
+			//li요소를 만들어서 text node로 msg를 출력하고 ul요소에 append한다.
+			$("<li/>").text(msg).appendTo("ul");
+			//입력창 초기화
+			$("#inputText").val("");		
+		};		
+	})();
+	
+	</script>
+</body>
+</html>

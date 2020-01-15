@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Step05_CardFilp2.html</title>
+    </head>
+    <style media="screen">
+        .wrapper {
+            /* 원근의 깊이 */
+            -webkit-perspective: 500px;
+            /* 시선의 위치 */
+            -webkit-perspective-origin: 50% 50%;
+            background-color: #cecece;
+            width: 400px;
+            height: 400px;
+        }
+        .target {
+            /* 3d transform 을 하겠다고 설정 */
+            -webkit-transform-style: preserve-3d;
+            /* x, y, z 축이 만나는 지점 설정 */
+            -webkit-transform-origin: 50% 50%;
+            -webkit-transition: all 0.4s ease-out;
+        }
+        .target > div {
+            /*.front div와 .back div 를 겹치기*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            /*뒤집었을때 뒷면이 보이게 할지에 대한 여부*/
+            backface-visibility: hidden;
+            /* default값: visible */
+        }
+        .target .front {
+            background-color: #2e272f;
+            background-image: url("images/image1.png");
+        }
+        .target .back {
+            background-color: #2e272f;
+            background-image: url("images/image2.png");
+            -webkit-transform: rotateY(180deg);
+        }
+        /*동적으로 추가 제거할 클래스*/
+        .rotateY {
+            -webkit-transform: rotateY(180deg);
+        }
+
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="target">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <button id="myBtn" type="button" name="button">눌러보셈</button>
+
+        <div class="wrapper">
+            <div class="target type2">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <button id="myBtn2" type="button" name="button">눌러보셈</button>
+        <script src="js/jquery-3.0.0.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $("#myBtn").click(function() {
+                $(".target").toggleClass("rotateY");
+            });
+
+            //초기값 0으로 생성
+            var rY = 0;
+            $("#myBtn2").click(function() {
+                // 버튼을 누를때 마다 45씩 증가시킨다.
+                rY += 45
+                $(".type2").css("-webkit-transform", "rotateY(" + rY + "deg)");
+            });
+        </script>
+    </body>
+</html>

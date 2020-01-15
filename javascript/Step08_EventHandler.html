@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_EventHandler.html</title>
+	<script>
+	alert("javascript 로딩중");
+
+	//window 이벤트 핸들러
+
+	//페이지 로딩이 완벽히 끝났을때(이미지 포함) 실행할 함수 등록
+	window.onload=function(){
+		alert("onload !");
+	};
+	//window의 크기가 변할때 호출되는 함수 등록
+	window.onresize=function(){
+		console.log("onresize !");
+	};
+	</script>
+</head>
+<body>
+	<h1>window 이벤트 핸들러 테스트</h1>
+	<script>
+	alert("페이지가 거의다 로딩 되갑니다.")
+	</script>
+</body>
+</html>

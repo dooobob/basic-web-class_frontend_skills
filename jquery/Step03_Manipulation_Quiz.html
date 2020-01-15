@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_Manipulation_Quiz.html</title>
+</head>
+<body>
+	<div class="container">
+		<button id="showBtn">회원목록 보기</button>
+		
+	</div>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+		$("#showBtn").click(function(){
+			$("<h1/>").text("회원 목록입니다.").appendTo(".container");
+			
+			var $th1=$("<th/>").text("번호");
+			var $th2=$("<th/>").text("이름");
+			var $th3=$("<th/>").text("주소");
+			var $tr1=$("<tr/>").append($th1).append($th2).append($th3);
+			var $thead=$("<thead/>").append($tr1);
+
+			var $td1=$("<td/>").text("1");
+			var $td2=$("<td/>").text("김구라");
+			var $td3=$("<td/>").text("노량진");
+			var $tr2=$("<tr/>").append($td1).append($td2).append($td3);
+			var $tbody=$("<tbody/>").append($tr2);
+			
+			$("<table/>").append($thead).append($tbody).appendTo(".container")
+		});
+	</script>
+</body>
+</html>

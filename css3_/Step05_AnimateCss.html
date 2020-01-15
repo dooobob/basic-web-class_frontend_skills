@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_AnimateCss.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<div class="container">
+		<h3 class="animated flash infinite">Animate Css 테스트</h3>
+		<form action="" class="animated zoomIn">
+			<table>
+				<tr>
+					<th><label for="email">이메일</label></th>
+					<td><input type="text" id="email"/></td>
+				</tr>
+				<tr>
+					<th><label for="pwd">비밀번호</label></th>
+					<td><input type="password" id="pwd"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="submit">가입</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+		$("input").on("focus", function(){
+			//적용할 애니메이션 class 추가
+			$(this).addClass("animated pulse");
+		});
+		//css 애니메이션이 끝났을때 실행할 함수 등록
+		$("input").on("webkitAnimationEnd", function(){
+			//애니메이션에 관련된 class 제거
+			$(this).removeClass("animated pulse");
+		});
+		$("button").on("mouseover", function(){
+			$(this).addClass("animated tada");
+		});
+		$("button").on("webkitAnimationEnd", function(){
+			$(this).removeClass("animated tada");
+		});
+	</script>
+</body>
+</html>

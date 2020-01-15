@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Effect.html</title>
+	<style>
+	.container{
+		width:960px;
+		margin:0 auto;
+		border: 1px solid red;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button id="hideBtn">숨기기</button>
+		<button id="showBtn">보이기</button>
+		<button id="toggleBtn">토글</button>
+		<div id="one">
+			<img src="images/1.jpg"/>
+		</div>
+	</div>	
+	<!-- jquery 로딩하기 -->
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	/*
+	var hideBtn=document.getElementById("hideBtn");
+	hideBtn.onclick=function(){};*/
+
+	//id가 hideBtn인 문서객체에 click 이벤트가 일어났을때 실행할 함수 등록
+	$("#hideBtn").on("click",function(){
+		//id가 one인 문서객체를 숨긴다.
+		//$("#one").hide();
+		//$("#one").hide(1000);
+		/*
+		$("#one").hide(1000,function(){
+			alert("뿅~")});*/
+		$("#one").hide({
+			duration:1000,
+			complete:function(){
+				alert("뿅~");
+			}
+		});
+	});
+
+	//id가 showBtn인 문서 객체에 click 이벤트가 일어 났을때 실행할 함수를 등록 해보세요.
+	$("#showBtn").on("click",function(){		
+		//$("#one").show();
+		//$("#one").show(1000);
+		$("#one").show(1000,function(){
+			alert("짠!")
+		});
+	});
+
+	$("#toggleBtn").on("click",function(){		
+		$("#one").toggle();
+	});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Effect2.html</title>
+	<style>
+	container{
+		width:960px;
+		margin:0 autuo;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button id="hideBtn">숨기기</button>
+		<button id="showBtn">보이기</button>
+		<button id="toggleBtn">토글</button>
+		<div id="one">
+			<h3>이미지</h3>
+			<img src="images/image1.png"/>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.2.js"></script>	
+	<script>
+	//$("#hideBtn").on("click",function(){}); 같은표현
+	$("#hideBtn").click(function(){
+		//$("#one").fadeOut();
+		//$("#one").fadeOut(1000);
+		/*
+		$("#one").fadeOut(1000,function(){
+			alert("뿅~");
+		});*/
+		$("#one").fadeOut({
+			duration:1000,
+			complete:function(){
+				alert("뿅~");
+			}
+		})
+	});
+	$("#showBtn").click(function(){
+		$("#one").fadeIn();
+	});
+	$("#toggleBtn").click(function(){
+		$("#one").fadeToggle();
+	});
+	</script>
+</body>
+</html>

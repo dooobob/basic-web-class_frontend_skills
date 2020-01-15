@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_EventHandler3.html</title>
+</head>
+<body>
+	<input type="text"/>
+	<input type="text"/>
+	<br/>
+	<a href="#one">하나</a>
+	<a href="two">두울</a>
+	<br/>
+	<button>버튼1</button>
+	<button>버튼2</button>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	//포커스가 왔을때 실행할 함수 등록
+	$("input").on("focus",function(){
+		$(this).css("background-color","yellow");
+	});
+	//포커스를 잃었을때 샐행할 함수 등록
+	$("input").on("blur",function(){
+		$(this).css("background-color","white");
+	});
+	$("a").on("focus",function(){
+		$(this).css("font-size","1.2em");
+	});
+
+	$("a").on("blur",function(){
+		$(this).css("font-size","1em");
+	});
+
+	$("button").on("focus",function(){
+		$(this).css("color","rgb(255,0,0)");
+	});
+	$("button").on("blur",function(){
+		$(this).css("color","#000000");	
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_JSON.html</title>
+	<script>
+	//JSON : javascript 객체 표기법을 따르는 문자열
+	//JavaScript Object Notation
+	var data1='{"num":1,"name":"김구라","isMan":true}';
+	var data2='[10,20,30,40,50]';
+	//JSON 표기법으로 저장할 수 있는 문자열 형태
+	var data3='{"num":100}'; //1. 정수형태 가능
+	var data4='{"num":10.1}'; //2. 실수형태 가능
+	var data5='{"name":"kimgura"}'; //3. 문자형태 가능
+	var data6='{"isRun":true,"isWait":false}'; //4. 논리형태 가능
+	var data7='{"names":["구라","원숭","주뎅"]}'; //5. 배열형태 가능
+	var data8='{"mem":{"num":1,"name":"gura"}}'; //6. Object형태 가능
+	var data9='[{},{},{}]'; //다양한 구조 가능
+	var data10='{"drive":function(){}}'; //함수형태 불가능 ***
+
+	//JSON문자열을 객체로 바꾸기
+	var result1=JSON.parse(data1);
+	var result2=JSON.parse(data2);
+
+	//javascript object를 문자열로 바꾸기
+	var result3=JSON.stringify(result1);
+	var result4=JSON.stringify(result2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

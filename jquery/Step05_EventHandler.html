@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_EventHandler.html</title>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+		//문서가 완벽히 로딩이 완료 되었을때 호출되는 함수 등록
+		window.onload=function(){
+			alert("로딩완료1");
+		};
+
+		//문서 로딩이 완료(이미지 data 로딩 제외)되었을때 호출되는 함수 등록
+		$(document).ready(function(){
+			alert("로딩완료2");
+		});
+
+		//위의 표현식을 줄여서 다음과 같이 쓸 수도 있다.
+		$(function(){
+			alert("로딩완료3");
+			$("img").css("background-color","yellow");
+		});
+	</script>
+</head>
+<body>
+	<h1>제목입니다.</h1>
+	<img src="images/image1.png">
+</body>
+</html>

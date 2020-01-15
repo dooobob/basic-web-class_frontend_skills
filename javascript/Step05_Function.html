@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step5_Function.html</title>
+	<script>
+	//익명의 함수를 만들어서 f1이라는 변수에 담기
+	var f1=function(){};
+	//f2라는 이름의 함수 만들기
+	function f2(){
+
+	};
+	//익명의 함수 만들어서 바로 사용하기
+	(function(){})();
+
+	var f3=function(){
+		console.log("f3() 호출!");
+	};
+
+	var f4=function(){
+		console.log("f4() 호출!");
+		return;
+	};
+
+	var f5=function(){
+		console.log("f5() 호출!");
+		return undefined;
+	};
+	//number type을 리턴해주는 함수
+	var f6=function(){
+		console.log("f6() 호출!");
+		return 10
+	};
+	//string type을 리턴해주는 함수
+	var f7=function(){
+		console.log("f7() 호출!");
+		return "abcd";
+	};
+	//plain object type을 리턴해주는 함수
+	var f8=function(){
+		console.log("f8() 호출!");
+		return {};
+	};
+	//array type을 리턴해주는 함수
+	var f9=function(){
+		console.log("f9() 호출!");
+		return [];
+	};
+	//function type을 리턴해주는 함수
+	var f10=function(){
+		console.log("f10() 호출!");
+		return function(){};
+	};
+
+	var f11=function(){
+		console.log("f11() 호출!");
+		return f9;
+	};
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

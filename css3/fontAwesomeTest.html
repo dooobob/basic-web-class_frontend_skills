@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>fontAwesomeTest.html</title>
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <style media="screen">
+            .my-icon {
+                font-size: 50px;
+                color: #0f0;
+            }
+            .my-caret {
+                font-size: 50px;
+                color: #00f;
+                -webkit-transition: all 0.4s ease-out;
+                transition: all 0.4s ease-out;
+            }
+            .my-caret:hover{
+              cursor: pointer;
+              -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+            }
+            .my-twitter{
+                background-color: blue;
+                color: white;
+                font-size: 50px;
+                border-radius: 50%;
+                padding: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>
+            class 속성의 value 로 fa 와 아이콘 글꼴의 이름을 지정하면 된다.</h3>
+        <i class="fa fa-check">
+            체크</i>
+        <i class="fa fa-search"></i>
+        <span class="fa fa-search-minus"></span>
+        <i class="fa fa-check my-icon"></i>
+        <i class="fa fa-caret-right my-caret"></i>
+        <i class="fa fa-twitter my-twitter"></i>
+        <i class="fa fa-twitter fa-spin my-twitter"></i>
+    </body>
+</html>

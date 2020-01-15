@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Step02_Transition.html</title>
+        <style media="screen">
+            .container {
+                width: 768px;
+            }
+            .target {
+                /* property | duration | timimng function */
+                /* timing function : linear(일정히), ease-in(천천히빠르게), ease-out(빠르게천천히), ease-in-out(시작끝 천천히) */
+                -webkit-transition: all 1s linear;
+                -moz-transition: all 1s linear;
+                -o-transition: all 1s linear;
+                -ms-transition: all 1s linear;
+                transition: all 1s linear;
+                /*-wmoz-transition + tab*/
+
+            }
+            .target2 {
+                /* property | duration | timimng function */
+                -webkit-transition: all 1s ease-out;
+                -moz-transition: all 1s ease-out;
+                -o-transition: all 1s ease-out;
+                -ms-transition: all 1s ease-out;
+                transition: all 1s ease-out;
+                /*-wmoz-transition + tab*/
+
+            }
+            .target2:hover,
+            .target:hover {
+                cursor: pointer;
+                background-color: #ff00ff;
+                -webkit-transform: translateX(100px) translateY(100px) rotate(10deg) scale(0.7);
+                transform: translateX(100px) translateY(100px) rotate(10deg) scale(0.7);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img class="target" src="images/blog-title.png" alt=""/>
+            <img class="target2" src="images/blog-title.png" alt=""/>
+        </div>
+    </body>
+</html>

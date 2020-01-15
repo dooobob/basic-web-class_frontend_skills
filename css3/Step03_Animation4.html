@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Step03_Animation4.html</title>
+        <link rel="stylesheet" href="css/animate.css">
+    </head>
+    <body>
+        <h1>원하는 시점에 animate.css 적용 시키기</h1>
+        <img src="images/blog-title.png" class="my-image"/>
+        <button id="myBtn">눌러보셈</button>
+        <script src="js/jquery-3.0.0.js"></script>
+        <script type="text/javascript">
+            $('#myBtn').on('click', function() {
+                $('.my-image').addClass('animated bounceInDown').one('webkitAnimationEnd animationend', function() {
+                    $(this).removeClass('animated bounceInDown');
+                });
+            });
+
+            $('#myBtn').on('mouseover', function() {
+                $(this).addClass('animated rubberBand').one('webkitAnimationEnd animationend', function() {
+                    $(this).removeClass('animated rubberBand');
+                });
+            });
+        </script>
+    </body>
+</html>

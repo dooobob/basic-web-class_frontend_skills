@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_BorderRadius.html</title>
+	<style>
+	img{
+		width:200px;
+		/*-webkit-border-radius: 10px; *//*chrome, safari, android, iphone */
+		/*-moz-border-radius: 10px; *//* firefox */
+		/*-o-border-radius: 10px; *//* opera */
+		/*-ms-border-radius: 10px; *//* ie */
+		/*border-radius: 10px;*/
+		/* -wmos-border-radius + tab키 */
+	}
+	#one{
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-o-border-radius: 10px;
+		-ms-border-radius: 10px;
+		border-radius: 10px;
+	}
+	#two{
+		-webkit-border-radius: 10px 20px;
+		-moz-border-radius: 10px 20px;
+		-o-border-radius: 10px 20px;
+		-ms-border-radius: 10px 20px;
+		border-radius: 10px 20px;
+	}
+	#three{
+		-webkit-border-radius: 10px 20px 30px;
+		-moz-border-radius: 10px 20px 30px;
+		-o-border-radius: 10px 20px 30px;
+		-ms-border-radius: 10px 20px 30px;
+		border-radius: 10px 20px 30px;
+	}
+	#four{
+		-webkit-border-radius: 10px 20px 30px 40px;
+		-moz-border-radius: 10px 20px 30px 40px;
+		-o-border-radius: 10px 20px 30px 40px;
+		-ms-border-radius: 10px 20px 30px 40px;
+		border-radius: 10px 20px 30px 40px;
+	}
+	</style>
+</head>
+<body>
+	<img id="one" src="images/1.jpg"/>
+	<img id="two" src="images/1.jpg"/>
+	<img id="three" src="images/1.jpg"/>
+	<img id="four" src="images/1.jpg"/>
+</body>
+</html>

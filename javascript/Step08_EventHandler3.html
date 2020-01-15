@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_EventHandler3.html</title>
+	<style>
+	/*여기는 css 영역 입니다.*/
+		div{
+			width:300px;
+			height:300px;
+			border-width: 2px;
+			border-style: solid;
+			border-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="myDiv"></div>
+	<script>
+	var div1=document.getElementById("myDiv");
+	div1.onmouseenter=function(){
+		console.log("onmouseenter");
+	};
+	div1.onmouseleave=function(){
+		console.log("onmouseleave");
+	};
+	div1.onmousemove=function(){
+		console.log("onmousemove");
+	};
+	div1.onmousedown=function(){
+		var eventX=event.offsetX;
+		var eventY=event.offsetY;
+		console.log("onmousedown x:"+eventX+" y:"+eventY);
+	};
+	div1.onmouseup=function(){
+		console.log("onmouseup");
+	};
+
+	/*아래와 같이 이벤트를 등록 할 수도 있다.
+	div1.addEventListener("mouseenter",function(){});
+	div1.addEventListener("mouseleave",function(){});
+	div1.addEventListener("mousemove",function(){});
+	div1.addEventListener("mousedown",function(){});
+	div1.addEventListener("mouseup",function(){});*/
+	</script>
+</body>
+</html>

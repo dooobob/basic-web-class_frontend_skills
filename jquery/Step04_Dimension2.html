@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_Dimension2.html</title>
+</head>
+<body>
+	<div id="myConsole"></div>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	//창의 크기가 바뀌었을때 실행할 함수 등록
+	$(window).on("resize",function(){
+		//폭과 높이를 얻어온다.
+		var width=$(this).width();
+		var height=$(this).height();
+		//출력해보기
+		$("#myconsole").text("width:"+width+" height:"+height);
+	});
+	</script>
+</body>
+</html>

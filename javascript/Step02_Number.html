@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Number.html</title>
+	<script>
+	var a=10;
+	var b=10.1;
+	var str1="10";
+	var str2="10.1";
+
+	//숫자 형태의 String type을 number type으로 변환하기
+	var result1=parseInt(str1);//정수
+	var result2=parseFloat(str2);//실수
+
+	//number type을 숫자 형태의 string type으로 변환하기
+	var result3=a.toString();//정수형태
+	var result4=b.toString();//실수형태
+
+	</script>
+</head>
+<body>
+	<input type="text" id="first"/>
+	<button onclick='plus()'>+</button>
+	<input type="text" id="second"/>
+	<strong>=</strong>
+	<span id="result"></span>
+	<script>
+	var plus=function(){
+		var num1=document.getElementById("first").value;
+		var num2=document.getElementById("second").value;
+		var result=parseInt(num1)+parseInt(num2);
+		document.getElementById("result").innerText=result;
+	};
+
+	</script>
+</body>
+</html>

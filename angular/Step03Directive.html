@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03Directive.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<script src="js/angular.min.js"></script>
+</head>
+<body ng-app>
+	<div class="container" ng-init="isChecked=true;count=0">
+		체크해보셈 <input type="checkbox" ng-model="isChecked"/>
+		isChecked : <strong>{{isChecked}}</strong> 
+		<br/>
+		여러번 체크해 보셈 <input type="checkbox"  ng-model="test" ng-change="count=count+1"/>
+
+		<p>바뀐 횟수 : <strong>{{count}}</strong></p>
+		<a ng-init="isFocus=false" ng-focus="isFocus=true" ng-blur="isFocus=false" href="#one">포커스를 주셈</a>
+		<br/>
+		<img ng-show="isFocus" src="images/image1.png" width="200"/>
+	</div>
+	<input type="text" placeholder="버튼스타일 입력..." ng-model="btnStyle"/>
+	<button ng-class="btnStyle">버튼</button>
+	<br/>
+	<select ng-model="btnStyle2">
+		<option value="btn btn-primary" selected>primary</option>
+		<option value="btn btn-success">success</option>
+		<option value="btn btn-info">info</option>
+		<option value="btn btn-warning">warning</option>
+		<option value="btn btn-danger">danger</option>
+	</select>
+	<button ng-class="btnStyle2">버튼2</button>
+</body>
+</html>

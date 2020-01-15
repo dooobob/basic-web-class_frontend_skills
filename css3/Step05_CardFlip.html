@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Step05_CardFilp.html</title>
+    </head>
+    <style media="screen">
+        .wrapper {
+            /* 원근의 깊이 */
+            -webkit-perspective: 500px;
+            /* 시선의 위치 */
+            -webkit-perspective-origin: 50% 50%;
+            background-color: #cecece;
+            width: 400px;
+            height: 400px;
+        }
+        .target {
+            /* 3d transform 을 하겠다고 설정 */
+            -webkit-transform-style: preserve-3d;
+            /* x, y, z 축이 만나는 지점 설정 */
+            -webkit-transform-origin: 50% 50%;
+            -webkit-transition: all 0.4s ease-out;
+        }
+        .target > div {
+            /*.front div와 .back div 를 겹치기*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            /*뒤집었을때 뒷면이 보이게 할지에 대한 여부*/
+            backface-visibility: hidden;
+            /* default값: visible */
+        }
+        .target .front {
+            background-color: #2e272f;
+            background-image: url("images/image1.png");
+        }
+        .target .back {
+            background-color: #2e272f;
+            background-image: url("images/image2.png");
+            -webkit-transform: rotateY(180deg);
+        }
+        .target:hover {
+            -webkit-transform: rotateY(180deg);
+        }
+
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="target">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+    </body>
+</html>

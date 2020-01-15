@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_EventHandler2.html</title>
+	<style>
+	div{
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		display: inline-block;
+	}
+	</style>
+</head>
+<body>
+	<div class="group">div1</div>
+	<div class="group">div2</div>
+	<div class="group">div3</div>
+	<div class="group">div4</div>
+	<div class="group">div5</div>
+	<br/>
+	<div id="console"></div>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	$(".group").on("mouseenter",function(){
+		$(this).css("background-color","yellow");
+	});
+	$(".group").on("mouseleave",function(){
+		$(this).css("background-color","white");
+	});
+	$(".group").on("mousedown",function(event){
+		//이벤트가 일어난 곳의 좌표 얻어오기
+		var eventX=event.offsetX;
+		var eventY=event.offsetY;
+		$("#console").text("x:"+eventX+" y:"+eventY)
+		$(this).text("mousedown");
+	});
+	$(".group").on("mousemove",function(event){
+		$(this).text("mousemove");
+	});
+	$(".group").on("mouseeup",function(event){
+		$(this).text("mouseeup");
+	});
+	</script>
+</body>
+</html>

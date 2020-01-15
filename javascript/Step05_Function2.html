@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Function2.html</title>
+	<script>
+	//함수의 인자를 1개 전달 받는 함수
+	var f1=function(a){
+		console.log(a);
+		console.log("f1() 함수가 리턴됩니다.");
+	};
+	//함수의 인자를 2개 전달 받는 함수
+	var f2=function(a,b){
+		console.log(a);
+		console.log(b);
+		console.log("f2() 함수가 리턴됩니다.");
+	};
+	//함수의 인자를 3개 전달 받는 함수
+	var f3=function(a,b,c){
+		console.log(a);
+		console.log(b);
+		console.log(c);
+		console.log("f3() 함수가 리턴됩니다.");
+	};
+
+	var f4=function(){
+		console.log(arguments);
+		console.log("f4() 함수가 리턴됩니다.");
+	};
+	</script>
+</head>
+<body>
+	<input type="text" id="inputId" placeholder="아이디 입력"/><br/>
+	<input type="password" id="inputPwd" placeholder="비밀번호"/><br/>
+	<input type="password" id="inputPwd2" placeholder="비밀번호 확인"/><br/>
+	<button onclick="insert2()">가입</button>
+	<script>
+	//가입 버튼을 눌렀을때 실행되는 함수 
+	var insert=function(){
+		//입력한 내용을 읽어온다. 
+		var id = document.getElementById("inputId").value;
+		var pwd = document.getElementById("inputPwd").value;
+		var pwd2 = document.getElementById("inputPwd2").value;
+		if(id == ""){
+			alert("아이디를 입력하세요!");
+			return; //함수 종료
+		}
+		if(pwd == ""){
+			alert("비밀번호를 입력하세요!");
+			return;
+		}
+		if(pwd2 == ""){
+			alert("비밀번호 확인란을 입력하세요");
+			return;
+		}
+	};
+
+	var insert2=function(){
+		if(isEmpty("inputId","아이디를 입력하세요")){
+			return;
+		}
+
+		if(isEmpty("inputPwd","비밀번호를 입력하세요")){
+			return;
+		}
+
+		if(isEmpty("inputPwd2", "비밀번호 확인란을 입력하세요")){
+			return;
+		}
+		//비밀번호를 동일하게 입력하지 않았다면 함수 종료 
+		if(! isEqual("inputPwd", "inputPwd2")){
+			return;
+		}
+		alert("가입 했습니다.");
+	};
+
+	//입력한 내용이 비어 있는지 확인하는 함수 
+	var isEmpty = function(id, msg){
+		//인자로 전달된 id 에 해당한는 input 요소의 value 값을 읽어온다.
+		var v = document.getElementById(id).value;
+		if(v == ""){ //만일 입력하지 않았다면
+			alert(msg);//인자로 전달받은 msg 를 alert 창에 출력한다.
+			return true; //비었다는 의미에서 true 를 리턴해준다.
+		}else{ // 만일 입력했다면 
+			return false; //비지 않았다는 의미에서 false 를 리턴해준다.
+		}
+	};
+	//인자로 전달 받은 id 에 해당하는 input 요소에 입력한 내용이 같으면 true 다르면 false 를 리턴하는 함수 
+	var isEqual=function(id1, id2){
+		var pwd1 = document.getElementById(id1).value;
+		var pwd2 = document.getElementById(id2).value;
+		if(pwd1 == pwd2){
+			return true;
+		}else{
+			alert("비밀번호와 비밀번호 확인란을 동일하게 입력하세요!");
+			return false;
+		}
+	};
+
+	</script>
+
+</body>
+</html>

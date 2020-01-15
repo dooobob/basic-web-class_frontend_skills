@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_EachTest.html</title>
+</head>
+<body>
+	<ul id="numList">
+		
+	</ul>
+	<ul id="nameList"></ul>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+		var nums=[10,20,30,40,50];
+		var names=["김구라","해골","원숭이"];
+		/*
+		for(var i in nums){
+			var num=nums[i];
+			$("<li/>").text(num).appendTo("#numList");
+		}
+		*/
+		$(nums).each(function(index,item){
+			console.log(index+"/"+item);
+			$("<li/>").text(item).appendTo("#numList");
+		});
+
+		$(names).each(function(){
+			console.log(this);
+			$("<li/>").text(this).appendTo("#nameList");
+		});
+
+	</script>
+</body>
+</html>

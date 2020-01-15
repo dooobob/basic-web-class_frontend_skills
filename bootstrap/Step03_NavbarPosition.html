@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_NavbarPosition.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.spacer{
+			height: 1000px;
+			background-color: #cecece;			
+		}
+		body{
+			padding-top: 60px;
+		}
+
+		@media(max-width: 767px){
+			body{
+				padding-bottom: 60px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<a href="#" class="navbar-brand">fixed-top</a>
+		</div>
+	</div>
+	<div class="navbar navbar-inverse navbar-fixed-bottom visible-xs-block">
+		<div class="container">
+			<a href="#" class="navbar-brand">fixed-bottom</a>
+		</div>
+	</div>		
+	<div class="container">
+		<h1>컨텐츠 입니다.</h1>
+		<div class="spacer"></div>
+	</div>
+</body>
+</html>

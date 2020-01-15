@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Step06_3dCarousel.html</title>
+        <link rel="stylesheet" href="css/font-awesome.css"/>
+        <style>
+            .wrapper {
+                /* 원근의 깊이 */
+                -webkit-perspective: 1000px;
+                /* 시선의 위치 */
+                -webkit-perspective-origin: 80% -40%;
+                height: 400px;
+            }
+            .target {
+                position: relative;
+                margin: 0 auto;
+                width: 400px;
+                height: 400px;
+                /* 3d transform 을 하겠다고 설정 */
+                -webkit-transform-style: preserve-3d;
+                /* x, y, z 축이 만나는 지점 설정 */
+                -webkit-transform-origin: 50% 50%;
+                -webkit-transform: translateZ(-200px);
+                transition: all 0.3s ease-out;
+            }
+            .target div {
+                /* 4 개의 div 모두 겹치기 */
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 400px;
+                height: 400px;
+                background-color: #2e272f;
+                opacity: 0.6;
+            }
+            .target > div:nth-of-type(1) {
+                background-image: url("images/image1.png");
+                -webkit-transform: translateZ(200px);
+            }
+            .target > div:nth-of-type(2) {
+                background-image: url("images/image2.png");
+                -webkit-transform: rotateY(90deg) translateZ(200px);
+            }
+            .target > div:nth-of-type(3) {
+                background-image: url("images/image3.png");
+                -webkit-transform: rotateY(180deg) translateZ(200px);
+            }
+            .target > div:nth-of-type(4) {
+                background-image: url("images/image4.png");
+                -webkit-transform: rotateY(270deg) translateZ(200px);
+            }
+            .target > div:nth-of-type(5) {
+                background-image: url("images/image5.png");
+                -webkit-transform: rotateX(90deg) translateZ(200px);
+            }
+            .target > div:nth-of-type(6) {
+                background-image: url("images/image6.png");
+                -webkit-transform: rotateX(-90deg) translateZ(200px);
+            }
+            .nav {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>3d carousel 예제</h3>
+        <div class="wrapper">
+            <div class="target">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="nav">
+            <button id="prevBtn" class="fa fa-chevron-left"></button>
+            <button id="upBtn" class="fa fa-chevron-up"></button>
+            <button id="downBtn" class="fa fa-chevron-down"></button>
+            <button id="nextBtn" class="fa fa-chevron-right"></button>
+        </div>
+        <h3>어쩌구 저쩌구...</h3>
+        <script src="js/jquery-3.0.0.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 초기값을 0으로 부여
+            var rY = 0;
+            var rX = 0;
+            $("#prevBtn").click(function() {
+                rY += 90;
+                $(".target").css("-webkit-transform", "translateZ(-200px) rotateY(" + rY + "deg)");
+            });
+            $("#nextBtn").click(function() {
+                rY -= 90;
+                $(".target").css("-webkit-transform", "translateZ(-200px) rotateY(" + rY + "deg)");
+            });
+            $("#upBtn").click(function() {
+                rX += 90;
+                $(".target").css("-webkit-transform", "translateZ(-200px) rotateX(" + rX + "deg)");
+            });
+            $("#downBtn").click(function() {
+                rX -= 90;
+                $(".target").css("-webkit-transform", "translateZ(-200px) rotateX(" + rX + "deg)");
+            });
+        </script>
+    </body>
+</html>

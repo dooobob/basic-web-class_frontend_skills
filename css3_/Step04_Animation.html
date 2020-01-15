@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_Animation.html</title>
+	<style>
+	.wrapper{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.target:hover{
+		-webkit-animation: myAni2 5s infinite linear alternate;
+	}
+
+	/* custom 애니메이션 정의하기 */
+	@-webkit-keyframes myAni{
+		from{
+			background-color: #ffffff;
+		}
+		to{
+			background-color: #ff0000;
+		}
+	}
+	@-webkit-keyframes myAni2{
+		0%{
+			background-color: #ffffff;
+		}
+		50%{
+			background-color: #00ff00;
+			-webkit-transform:rotate(90deg);
+		}
+		100%{
+			background-color: #ff0000;
+			-webkit-transform:rotate(180deg);
+		}
+	}	
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<img class="target" src="images/blog-title.png"/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Step03_Animation2.html</title>
+        <style>
+            .container {
+                width: 768px;
+                margin: 0 auto;
+            }
+
+            .my-image {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                padding: 20px;
+            }
+            .my-image:hover {
+                cursor: pointer;
+            }
+            /* 동적으로 추가 혹은 제거할 css 를 클래스로 정의*/
+            .rotateAni {
+                /* 키프레임의 이름 | 수행 시간 | 반복횟수 | timing function | 왕복 여부 */
+                -webkit-animation: guraAni 2s infinite linear alternate;
+                animation: guraAni 2s infinite linear alternate;
+            }
+
+            /* guraAni 라는 이름의 키프레임 정의하기 */
+            @-webkit-keyframes guraAni {
+                0% {
+                    background-color: #fff;
+                    -webkit-transform: rotate(0deg) scale(1.0);
+                }
+                50% {
+                    background-color: #0f0;
+                    -webkit-transform: rotate(180deg) scale(1.25);
+                }
+                100% {
+                    background-color: #f0f;
+                    -webkit-transform: rotate(360deg) scale(1.5);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="images/kim1.png" class="my-image"/>
+            <br/>
+            <button id="myBtn">눌러보셈</button>
+        </div>
+        <script src="js/jquery-3.0.0.js"></script>
+        <script>
+            $("#myBtn").click(function() {
+                //rotateAni 클래스를 토글 시킨다.
+                $(".my-image").toggleClass("rotateAni");
+            });
+        </script>
+    </body>
+</html>

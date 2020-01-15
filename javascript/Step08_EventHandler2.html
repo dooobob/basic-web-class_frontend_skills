@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_EventHandler2.html</title>	
+	<script>
+	window.onload=function(){
+		//id가 myBtn인 문서객체의 참조값을 얻어온다.
+		var btn1=document.getElementById("myBtn");
+		//"click"이벤트가 일어났을때 실행할 함수를 등록한다.
+		btn1.onclick=function(){
+			alert("버튼을 눌렀네?");
+		};
+
+		//아래의 표현식은 IE 8 이하버전에서는 동작 하지 않는다.
+		var btn2=document.getElementById("myBtn2");
+		btn2.addEventListener("click",function(){
+			alert("오잉?");
+		});
+	};
+
+	</script>
+</head>
+<body>
+	<button id="myBtn">눌러 보셈</button>
+	<button id="myBtn2">눌러 보셈2</button>
+	<br/>
+	<input type="text" id="inputText" placeholder="입력"/>
+	<script>
+	var input1=document.getElementById("inputText");
+	//포커스가 갔을때 실행할 함수 등록
+	input1.onfocus=function(){
+		console.log("onfocus!");
+	};
+	//포커스를 읽었을때 실행할 함수 등록
+	input1.onblur=function(){
+		console.log("onblur!");
+	};
+	//키보드를 눌렀을때 실행할 함수 등록
+	input1.onkeydown=function(event){
+		//눌러진 키의 코드값 얻어오기
+		var code=event.keyCode;
+		console.log("onkeydown! code:"+code);
+	};
+	//키보드를 눌렀다가 때었을때 실행할 함수 등록
+	input1.onkeyup=function(event){
+		//눌러진 키의 코드값 얻어오기
+		var code=event.keyCode;
+		console.log("onkeyup code:"+code);
+	};
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_Manipulation4.html</title>
+	<style>
+	img{
+		width: 200px;
+	}
+	</style>
+</head>
+<body>
+	<div class="contatiner">
+		<div class="img-panel">
+			<img src="images/image1.png"/>
+			<img src="images/image2.png"/>
+			<img src="images/image3.png"/>
+		</div>
+		<button id="moreBtn">더보기</button>
+	</div>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	$("#moreBtn").click(function(){
+		//jquery img 문서 객체를 3개 만들어서 참조값을 변수에 담는다.
+		var img1=$("<img/>").attr("src","images/image4.png");
+		var img2=$("<img/>").attr("src","images/image5.png");
+		var img3=$("<img/>").attr("src","images/image6.png");
+
+		$("<div/>").addClass("img-panel").append(img1).append(img2).append(img3).appendTo(".contatiner")
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_Manipulation2.html</title>
+	<style>
+	.box{
+		width:200px;
+		height:200px;
+		background-color: yellow;		
+		border:1px solid red;
+	}
+	.enlarge{
+		width: 300px;
+		height: 300px;
+		background-color: gray;
+	}
+	</style>
+</head>
+<body>
+	<div>div1</div>
+	<div>div2</div>
+	<div>div3</div>
+	<div>div4</div>
+	<div>div5</div>
+	<button id="myBtn">눌러보셈</button>
+	<img src="images/kim1.png"/>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	$("div").on("mouseenter",function(){
+		//이벤트가 일어난 문서객체 선택해서 동작
+		$(this).addClass("box");
+	});
+
+	$("div").on("mouseleave",function(){
+		$(this).removeClass("box");
+	});
+	//버튼을 클릭했을때 실행할 함수 등록
+	$("#myBtn").on("click",function(){
+		//enlarge클래스를 토글 시킨다.
+		$("img").toggleClass("enlarge");
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step03_Alert.html</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE 8 을 위한 fix -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </head>
+  <body>
+  	<div class="container">
+  		<h3>Alert 스타일</h3>
+  		<div class="alert alert-success">
+  			성공입니다.
+  		</div>
+  		<div class="alert alert-info">
+  			소문자로 입력하세요
+  		</div>
+  		<div class="alert alert-warning">
+  			비밀번호를 확인하세요
+  		</div>
+  		<div class="alert alert-danger">
+  			<strong>삭제</strong> 하였습니다.
+  		</div>
+  		<h3>Alert 안에 Anchor</h3>
+  		<div class="alert alert-info">
+  			<a href="#">여기를 참고 하세요.</a>
+  		</div>
+  		<div class="alert alert-warning">
+  			<a href="#"><strong>로그인</strong></a>을 먼저 하세요.
+  		</div>
+  		<h3>삭제 할수 있는 Alert</h3>
+  		<div class="alert alert-warning alert-dismissible">
+  			<button class="close" data-dismiss="alert">
+  				<span class="sr-only">닫기</span>
+  				&times;
+  			</button>
+  			<strong>비밀번호</strong>를 확인하세요.
+  		</div>
+  	</div>
+  </body>
+</html>

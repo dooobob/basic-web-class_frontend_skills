@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Selectors3.html</title>
+	<style>
+	button{		
+		border-width: 1px solid #cecece;
+		background-color: white;
+		font-weight: bold;
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+	/* :가상 클래스로 선택할때 사용하는 기호 */
+	button:hover{
+		cursor : pointer;
+		background-color: #ff00ff;
+		color: #ffffff;
+	}
+
+	/* 클릭한 상태에서 추가되는 가상 클래스 */
+	button:active{
+		background-color: #aa00aa;
+	}
+
+	a{
+		color: #000000;
+		text-decoration: none; /* 밑줄제거 */
+	}
+
+	a:hover{
+		color: #0000ff;
+		text-decoration: underline; /* 밑줄 추가 */
+	}
+
+	</style>
+</head>
+<body>
+<button class="hover">버튼</button>
+<button>버튼</button>
+<button>버튼</button>
+
+<br/>
+<a href="#one">링크1</a>
+<a href="#two">링크2</a>
+<a href="#three">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, ipsa distinctio. Qui tenetur, dolores minima eligendi excepturi earum a expedita, debitis soluta quos repudiandae voluptatum enim rerum harum ea facere.</a>
+
+</body>
+</html>

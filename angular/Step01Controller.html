@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01Controller.html</title>
+	<script src="js/angular.min.js"></script>
+	<script>
+	//angular 모듈 만들기
+	var myApp=angular.module("myApp",[]);
+	//Ctrl1	이라는 이름의 컨트롤러 만들기
+	myApp.controller("Ctrl1",["$scope",function($scope){
+		$scope.name="김구라";
+		$scope.nums=[10,20,30,40,50];
+		$scope.merong=function(){
+			alert("버튼을 눌렀네요?");
+		};
+	}]);
+	//Ctrl2	이라는 이름의 컨트롤러 만들기
+	myApp.controller("Ctrl2",["$scope",function($scope){
+		$scope.name="맛동산";
+		$scope.names=["김구라","해골","원숭이"];
+	}]);
+	</script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="Ctrl1">
+		<p>내이름은 <strong>{{name}}</strong></p>
+		<ul>
+			<li ng-repeat="tmp in nums">{{tmp}}</li>
+		</ul>
+		<button ng-click="merong()">눌러보셈</button>
+	</div>
+	<div ng-controller="Ctrl2">
+		<p>너의 이름은 <strong>{{name}}</strong></p>
+		<ul>
+			<li ng-repeat="tmp in names">{{tmp}}</li>
+		</ul>		
+	</div>
+</body>
+</html>

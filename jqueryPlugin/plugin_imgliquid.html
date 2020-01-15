@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>plugin_imgliquid.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+	.img-panel{
+		height: 300px;
+	}
+	.img-panel > img{
+		width:100%;
+		height: 100%;
+	}
+	</style>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script src="js/imgLiquid.js"></script>
+	<script>
+	$(function(){
+		//플러그인 동작 시키기
+		$(".img-panel").imgLiquid();
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="img-panel">
+					<img src="images/1.jpg"/>
+				</div>
+			</div>
+			<div class="col-xs-3">
+				<div class="img-panel">
+					<img src="images/2.jpg"/>
+				</div>
+			</div>
+			<div class="col-xs-3">
+				<div class="img-panel">
+					<img src="images/3.jpg"/>
+				</div>
+			</div>
+			<div class="col-xs-3">
+				<div class="img-panel">
+					<img src="images/4.jpg"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

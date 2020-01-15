@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_PlainObject.html</title>
+	<script>
+		var mem1={"num":1,"name":"김구라","addr":"노량진"};
+		var mem2={"num":2,"name":"해골","addr":"행신동"};
+		//object의 특정방 참조해서 값 읽어오기
+		var a=mem1.addr;
+		var b=mem2["addr"];
+
+		//object의 특정방의 내용 수정 혹은 추가하기
+		mem1.name="개구라";
+		mem2["name"]="해골바가지";
+
+		//object의 특정방 삭제하기
+		delete mem1.addr;
+		delete mem2["addr"];
+
+		var car1={
+			"company":"kia",
+			"name":"프라이드",
+			"drive":function(){
+				alert(this.name+"가 달려요!");
+			}
+		};
+
+		var car2={
+			"company":"hyundai",
+			"name":"소나타",
+			"drive":function(){
+				alert(this.name+"가 달려요");
+			}
+		}
+
+		//car1 object의 drive 함수를 사용(호출)해 보세요
+		car1.drive();
+		car2.drive();
+	</script>
+</head>
+<body>
+	<h1>Plain Object 사용하기</h1>
+	<input type="text" id="inputNum" placeholder="번호입력"/>
+	<input type="text" id="inputName" placeholder="이름입력"/>
+	<input type="text" id="inputAddr" placeholder="주소입력"/>
+	<select id="gender">
+		<option value="">성별선택</option>
+		<option value="man">남</option>
+		<option value="woman">여</option>
+	</select>
+	<button onclick="save()">PlaninObject에 저장하기</button>
+	<script>
+	//한 사람의 정보를 저장할 plain object
+	var person={};
+	var save=function(){
+		//입력한 value값을 읽어온다
+		var num=document.getElementById("inputNum").value;
+		var name=document.getElementById("inputName").value;
+		var addr=document.getElementById("inputAddr").value;
+		var gender=document.getElementById("gender").value;
+		//함수 바깥영역에 정의된 person object를 참조해서 입력한 value값을 저장한다.
+		person.num=num;
+		person.name=name;
+		person.addr=addr;
+		person.gender=gender;
+		alert("정보를 저장했습니다.");
+	};
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_3dTransform.html</title>
+	<style>
+	.wrapper{
+		width: 960px;
+		margin: 0 auto;
+		border: 1px solid red;
+		/* 원근의 깊이(내 시선과 떨어진 가상의 거리) */
+		-webkit-perspective: 500px;
+		/* 시선의 위치 */
+		-webkit-perspective-origin: 50% 50%;
+	}
+	.target{
+		width: 200px;
+		margin: 0 auto;
+		background-color: #cecece;
+		/* 3차원 transform 하겠다고 선언 */
+		-webkit-transform-style: preserve-3d;
+		/* x, y, z축이 만나는 위치*/
+		-webkit-transfrom-origin: 50% 50%;
+		/* 뒷면을 보이게 할지에 대한 여부 visible | hidden */
+		-webkit-backface-visibility: hidden;
+		-webkit-transition: 0.5s ease-out;
+	}
+	.target img{
+		max-width: 100%;
+	}
+	.target#one:hover{
+		-webkit-transform: rotateX(45deg);
+	}
+	.target#two:hover{
+		-webkit-transform: rotateY(180deg);
+	}	
+	.target#three:hover{
+		-webkit-transform: rotateZ(45deg);
+	}	
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="target" id="one">
+			<img src="images/image1.png"/>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="target" id="two">
+			<img src="images/image2.png"/>
+		</div>
+	</div>	
+	<div class="wrapper">
+		<div class="target" id="three">
+			<img src="images/image3.png"/>
+		</div>
+	</div>		
+</body>
+</html>

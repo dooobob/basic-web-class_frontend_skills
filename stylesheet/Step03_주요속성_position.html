@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_주요속성_position.html</title>
+	<style>
+	.box{
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		/* position: static; 디폴트 값은 static 이다 */
+	}
+	.absolute{
+		/* document 기준으로 절대 위치에 배치하기 */
+		position : absolute;
+		background-color: yellow;
+		/* top | right | bottmom | left 를 설정할 수 있다 */
+		top:  100px;
+		left: 200px;
+	}
+	.relative{
+		/* 원래 배치될 위치를 기준으로 상대 위치에 배치하기 */
+		position: relative;
+		background-color: #ff00ff;
+		top: 50px;
+		left: 100px;
+	}
+	.fixed-top{
+		/* window 기준으로 고정 위치에 배치하기 */
+		position: fixed;
+		background-color: #00ff00;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0.6; /* 투명도 1.0:완전 불투명*/
+	}
+
+	.fixed-bottom{
+	/* window 기준으로 고정 위치에 배치하기 */
+	position: fixed;
+	background-color: #00ff00;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0.6; /* 투명도 1.0:완전 불투명*/
+	}
+	.space{
+	height: 2000px;
+	background-color: #cecece;
+	}
+	</style>
+
+
+</head>
+<body>
+	<h3>position 속성 사용하기</h3>
+	<div class="box">static</div>
+	<div class="box">static</div>
+	<div class="box absolute">absolute</div>
+	<div class="box relative">relative</div>
+	<div class="fixed-top">fixed</div>
+	<div class="space">space</div>
+	<div class="fixed-bottom">fixed</div>
+</body>
+</html>

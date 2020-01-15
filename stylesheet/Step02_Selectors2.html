@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Selectors2.html</title>
+	<style>
+	/* 자식 요소를 선택하는 기호  >  */
+	.header > .nav{
+		list-style-type: none;
+	}
+
+	/* 띄어쓰기 (공백)은 자손 요소를 선택할때 사용 */
+	.header a{
+		color : red;
+		text-decoration: none;
+	}
+	
+	/* div의 content명인것 */
+	div.content{
+		background-color: #cecece;
+	}
+	
+	.content.main{
+		background-color: yellow;
+	}
+
+	div#one{
+		font-size: 50px;
+	}
+
+	.content.news > ul{
+		list-style-type: decimal;
+	}
+
+	/* 바로 인접한 문서 요소를 선택할때 + 를 사용*/
+	h1 + p{
+		background-color: #00ffff;
+	}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<ul class="nav">
+			<li><a href="#">하나</a></li>
+			<li><a href="#">두울</a></li>
+			<li><a href="#">세엣</a></li>
+		</ul>
+		
+		<ul class="nav">
+			<li><a href="#">하나</a></li>
+			<li><a href="#">두울</a></li>
+			<li><a href="#">세엣</a></li>
+		</ul>	
+		
+	</div>
+	<!--문서 요소는 클래스명이 여러개 일수 있다.-->
+	<div class="content news" id="one">
+		<ul class="nav">
+			<li><a href="#">하나</a></li>
+			<li><a href="#">두울</a></li>
+			<li><a href="#">세엣</a></li>
+		</ul>
+	</div>
+	<div class="content main">
+		<ul class="nav">
+			<li><a href="#">하나</a></li>
+			<li><a href="#">두울</a></li>
+			<li><a href="#">세엣</a></li>
+		</ul>
+	</div>
+	<div class="news">
+		<ul class="nav">
+			<li><a href="#">하나</a></li>
+			<li><a href="#">두울</a></li>
+			<li><a href="#">세엣</a></li>
+		</ul>
+	</div>
+
+	<h1>헤드라인 입니다.</h1>
+	<p>헤드라인에 인접한 p</p>
+	<p>두번째 p</p>
+	<p>세번째 p</p>
+
+	<h1>헤드라인 입니다.</h1>
+	<p>헤드라인에 인접한 p</p>
+	<p>두번째 p</p>
+	<p>세번째 p</p>	
+</body>
+</html>

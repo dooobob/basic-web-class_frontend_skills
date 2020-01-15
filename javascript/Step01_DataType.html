@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_DataType.html</title>
+	<script>
+	//여기는 javascript 영역입니다.
+
+	//number type int
+	var num=10;
+	//number type float
+	var num2=10.1;
+	//string type
+	var name="김구라";
+	var name2="해골";
+	//boolean type
+	var isRun=true;
+	var isEqual=10==10;
+	var isGreater=10>9;
+	var isRight=true||false;
+	var isRight2=true&&false;
+	var isRight3=!true;
+	//object(plain object) type
+	var obj={};
+	var mem={"num":1,"name":"김구라","addr":"노량진"};
+	var mem2={num:1,name:"해골",addr:"행신동"}
+	var mem3={};
+	mem3.num=3;
+	mem3.name="원숭이";
+	mem3.addr="상도동";
+	
+	var mem4={};
+	mem4["num"]=4;
+	mem4["name"]="주뎅이";
+	mem4["addr"]="봉천동";
+
+	var mem5={};
+	var a="num";
+	var b="name";
+	var c="addr";
+	//mem5.a=5;   num이 아니라 a라는 방이생김
+	mem5[a]=5;
+	mem5[b]="덩어리";
+	mem5[c]="상도동";
+
+	//object(array) type
+	var arr=[];
+	var nums=[10,20,30,40,50];
+	var names=["김구라","해골","원숭이","주뎅이","덩어리"];
+	var members=[{},{},{}];
+
+	//function type (중요)!
+	f3();
+	var f=function(){};
+	var f2=function(){
+		alert("하나");
+		alert("두울");
+		alert("세엣");
+		function test(){};//f2가 로딩될때 로딩됨
+	};
+	//우선적으로 만들어 지는 함수이다.
+	function f3(){
+		alert("오잉 f3?");
+	};//var f3=function(){};의 줄인표현,  
+	//function f3(){};표현은 함수 선언전에 호출 할 수 있다.(처음 읽을때 우선적으로 읽어옴)
+
+	//익명의 함수를 페이지 로딩 시점에 만들자 마자 사용하기
+	(function(){
+		alert("익명의 함수를 만들자 마자 사용합니다.");
+	})();//함수 선언하면서 바로 호출
+
+	//undefined type
+	var myName;
+	var yourName=undefined;
+
+	//object type 으로 간주되는 null도 있다.
+	var ourName=null;
+	
+	</script>
+</head>
+<body>
+	<h1>javascript 테스트</h1>
+</body>
+</html>

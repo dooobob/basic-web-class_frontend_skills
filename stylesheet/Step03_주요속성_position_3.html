@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_주요속성_position_3.html</title>
+	<!-- 외부 css 로딩 시키기 -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<style>
+	.container{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.fa-facebook-official{
+		color: #0000ff;
+		font-size: 40px;
+	}
+	#search{
+		position: relative;   /* 부모를 relative */
+		width : 300px;
+	}
+
+	#search input{
+		width : 300px;
+	}
+	#search a{
+		position: absolute;    /* 자식을 absolute */
+		color : #000000;
+		top: 0;
+		right: 0;
+	}
+	</style>
+</head>
+<body class> <!-- <body class="fa-spin"> -->
+	<div class="container">
+		<h1>font awesome css 활용</h1>
+		<span class="fa fa-facebook-official"></span>
+		<span class="fa fa-search fa-spin"></span>
+		<span class="fa fa-cog fa-spin"></span>
+		<div id="search">
+			<input type="text"/>
+			<a href="#">
+				<span class="fa fa-search"></span>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

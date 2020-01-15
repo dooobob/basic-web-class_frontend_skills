@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_Dimension.html</title>
+	<style>
+	.box{
+		margin: 5px;
+		border: 3px solid red;
+		padding: 10px;
+		width: 200px;
+		height: 200px;
+	}
+	</style>
+</head>
+<body>
+	<div class="box" id="one"></div>
+	<div class="box" id="two"></div>
+	<div class="box" id="three"></div>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	var width=$("#one").width();
+	var height=$("#one").height();
+	//크기 정보를 div에 출력하기
+	$("#one").text("width:"+width+" height:"+height);
+
+	var innerWidth=$("#two").innerWidth();
+	var innerHeight=$("#two").innerHeight();
+	var info="innerWidth:"+innerWidth+" innerHeight:"+innerHeight;
+	$("#two").text(info);
+
+	//border를 포함한 크기 정보 얻어오기
+	//.outerWidth(마진포함여부)
+	var outerWidth=$("#three").outerWidth(true);
+	var outerHeight=$("#three").outerHeight(true);
+	var info2="outerWidth:"+outerWidth+" outerHeight:"+outerHeight;
+	$("#three").text(info2);
+	</script>
+</body>
+</html>

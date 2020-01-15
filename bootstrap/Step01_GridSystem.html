@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_GridSystem.html</title>
+	<!-- bootstrap css 로딩하기 -->
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+	div{
+		border: 1px solid red;
+	}
+	.row{
+		border: 1px solid blue;
+	}
+	.row div{
+		border: 1px dotted green;
+	}
+	img{
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+<!-- device 의 폭을 100% 다 사용하는 유동형 컨테이너 -->
+<div class="container-fluid">
+	<h1>.container-fluid</h1>
+</div>
+<!-- device 의 폭을 768px 미만에서는 100% , 768px ~ 991px 에서는 750px , 992px ~ 1199px 에서는 970px , 1200px 이상에서는 1170px 의 폭을 가지는 가운데 정렬된 컨테이너 -->
+<div class="container">
+	<h1>.container</h1>
+</div>
+
+<div class="container-fluid">
+	<h3>.container-fluid 를 나눠 갖기</h3>
+	<div class="row">
+		<div class="col-xs-6">col-xs-6</div>
+		<div class="col-xs-6">col-xs-6</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3">col-xs-3</div>
+		<div class="col-xs-3">col-xs-3</div>
+		<div class="col-xs-3">col-xs-3</div>
+		<div class="col-xs-3">col-xs-3</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">col-xs-4</div>
+		<div class="col-xs-4">col-xs-4</div>
+		<div class="col-xs-4">col-xs-4</div>
+	</div>
+</div>
+<div class="container">
+	<h3>.container 를 나눠 갖기</h3>
+	<div class="row">
+		<div class="col-xs-6">col-xs-6</div>
+		<div class="col-xs-6">col-xs-6</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3">col-xs-3</div>
+		<div class="col-xs-3">col-xs-3</div>
+		<div class="col-xs-3">col-xs-3</div>
+		<div class="col-xs-3">col-xs-3</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">col-xs-4</div>
+		<div class="col-xs-4">col-xs-4</div>
+		<div class="col-xs-4">col-xs-4</div>
+	</div>
+</div>
+<div class="container">
+	<h3>.col-xs-6 과 .col-sm-3 적용하기</h3>
+	<div class="row">
+		<div class="col-xs-6 col-sm-3">div</div>
+		<div class="col-xs-6 col-sm-3">div</div>
+		<div class="col-xs-6 col-sm-3">div</div>
+		<div class="col-xs-6 col-sm-3">div</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6 col-sm-3">
+			<img src="../html/images/image1.png"/>
+		</div>
+		<div class="col-xs-6 col-sm-3">
+			<img src="../html/images/image2.png"/>
+		</div>
+		<div class="col-xs-6 col-sm-3">
+			<img src="../html/images/image3.png"/>
+		</div>
+		<div class="col-xs-6 col-sm-3">
+			<img src="../html/images/image4.png"/>
+		</div>
+		<h3>.col-sm-6만 정의하기</h3>		
+	</div>
+	<div class="row">
+		<div class="col-sm-6">col-sm-6</div>
+		<div class="col-sm-6">col-sm-6</div>
+	</div>
+	<h3>col-sm-6 .col-md-3</h3>
+	<div class="row">
+		<div class="col-sm-6 col-md-3">div</div>
+		<div class="col-sm-6 col-md-3">div</div>
+	</div>
+</div>	
+</body>
+</html>

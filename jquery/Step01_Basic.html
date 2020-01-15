@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_Basic.html</title>
+	<!-- jquery 로딩하기 -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script>
+	//문서 로딩이 완료 되었을때 호출되는 함수 등록
+	window.onload=function(){
+		$("p").text("p요소 입니다.");
+		$(".myClass").text("hi!");
+		$("#one").text("나의 아이디는 one 입니다.");
+	};	
+	</script>
+</head>
+<body>
+	<div>div1</div>
+	<div class="myClass">div2</div>
+	<div class="myClass">div3</div>
+	<div id="one">div4</div>
+	<div>div5</div>
+
+	<p>p1</p>
+	<p class="myClass">p2</p>
+	<p id="two">p3</p>
+	
+</body>
+</html>

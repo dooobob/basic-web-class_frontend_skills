@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Selectors.html</title>
+	<style>
+	/* 모든 요소를 다 선택하는 선택자 */
+	*{
+		color:blue !important;
+	}
+
+	/* 요소명 선택자 */
+	div{
+		background-color: #dddddd;
+		width: 100px;
+		height: 100px;
+		border-width: 1px;   /* 경계선의 굵기 */
+		border-color: red;   /* 경계선의 색깔 */
+		border-style: solid; /* 경계선의 선스타일 */
+	}
+	p{
+		border: 1px solid blue;
+		color: red;
+	}
+
+	/* 클래스 선택자 (클래스명 앞에 .을 붙인다 */
+	.yellow-club{
+		background-color: yellow;
+	}
+	
+	/* 아이디 선택자 */
+	#myId{
+		width: 200px;
+		height: 200px;
+	}
+	
+	#myImg{
+		background-color: yellow;
+	}
+	.ourImg{
+		background-color: pink;
+	}
+
+	img{
+		background-color: gray !important;
+	}
+
+	</style>
+</head>
+<body>
+	<div>div1 입니다.</div>
+	<div class="yellow-club">div2 입니다.</div>
+	<div class="yellow-club">div3 입니다.</div>
+	<div class="yellow-club">div4 입니다.</div>
+	<div id="myId" style="width:50px;height:50px">div5 입니다.</div>
+	<p>p 요소1</p>
+	<p>p 요소2</p>
+	<p>p 요소3</p>
+	<p>css 가중치 element:1, class:10, id:100, inline style:1000, !important : 10000</p>
+	<img style="background-color:red" id="myImg" class="ourImg" src="images/image1.png"/>
+	<img id="myImg" src="images/1.gif"/>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_주요속성_z-index.html</title>
+	<style>
+		.absolute{
+			position: absolute;
+			width: 300px;
+		}
+		#one{
+			top: 100px;
+			left: 100px;
+			z-index: 2;
+		}
+		#two{
+			top: 150px;
+			left: 150px;
+			z-index: 1;
+		}
+		#three{
+			top: 200px;
+			left: 200px;
+			z-index: 0;
+		}
+		/* 
+			z-index 는 position 속성이 설정된 요소에 대해서만 사용할수 있음 
+			position: absolute | relative | fixed;
+			- 부모 요소의 z 인덱스를 벗어나서 배치할수는 없다.
+		*/
+		#parent1{
+			top:500px;
+			left:100px;
+			z-index: 10;
+		}
+		#parent2{
+			top:500px;
+			left:100px;
+			z-index: 20;
+		}
+		#parent1 img{
+			/* 부모 요소의 z-index 번호의 숫자로 비교된 우위를 자식요소에서 바꾼다고 자식요소값으로 보여지지 않는다.
+			무조건 부모요소의 z-index값이 우선시 됨 */
+			z-index: 100;
+		}
+		#parent2 img{
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<h3>z-index 속성 사용하기</h3>
+	<img src="images/image1.png" id="one" class="absolute"/>
+	<img src="images/image2.png" id="two" class="absolute"/>
+	<img src="images/image3.png" id="three" class="absolute"/>
+
+	<h3>z-index 는 부모 요소의 z-index 도 중요하다</h3>
+	<div class="absolute" id="parent1">
+		<img src="images/image4.png" class="absolute"/>
+	</div>
+	<div class="absolute" id="parent2">
+		<img src="images/image5.png" class="absolute"/>
+	</div>
+</body>
+</html>

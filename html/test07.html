@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test07.html</title>
+	<style>
+	table{
+		border-collapse: collapse;
+	}
+	</style>
+</head>
+<body>
+	<h1> 표(table) 형식으로 출력하기</h1>
+	<table>
+		<!-- table의 제목을 명시한다. -->
+		<caption>회원 목록입니다.</caption>
+		<!-- 몇개의 칼럼으로 구성을 할지와 칼럼의 폭을 결정한다. -->
+		<col width="100"/>
+		<col width="100"/>
+		<col width="200"/>
+		<!-- 칼럼의 정보를 명시한다.-->
+		<thead>
+			<!-- tr은 하나의 행 즉 table row를 의미한다.-->
+			<tr>
+				<!-- 각 칼럼의 대표 정보를 작성한다.-->
+				<th>번호</th>
+				<th>이름</th>
+				<th>주소</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>김구라</td>
+				<td>노량진</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>해골</td>
+				<td>행신동</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>원숭이</td>
+				<td>상도동</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr/>
+
+	<table border="1">
+		<!-- table의 제목을 명시한다. -->
+		<caption>회원 목록입니다.</caption>
+		<!-- 몇개의 칼럼으로 구성을 할지와 칼럼의 폭을 결정한다. -->
+		<col width="100"/>
+		<col width="100"/>
+		<col width="200"/>
+		<!-- 칼럼의 정보를 명시한다.-->
+		<thead>
+			<!-- tr은 하나의 행 즉 table row를 의미한다.-->
+			<tr>
+				<!-- 각 칼럼의 대표 정보를 작성한다.-->
+				<th>번호</th>
+				<th>이름</th>
+				<th>주소</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>김구라</td>
+				<td>노량진</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>해골</td>
+				<td>행신동</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>원숭이</td>
+				<td>상도동</td>
+			</tr>
+		</tbody>
+	</table>	
+
+	<hr/>
+	<h1> 칼럼 합치기 연습 </h1>
+	<table border="1">
+		<tr>
+			<td colspan="2">1</td>
+			<!--<td>2</td>-->
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+	
+	<h1> 로우 합치기 연습 </h1>
+	<table border="1">
+		<tr>
+			<td rowspan="2">1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<!--<td>4</td>-->
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+
+	<h1>칼럼과 로우를 같이 합치기</h1>
+	<table border="1">
+		<tr>
+			<td rowspan="2" colspan="2">1</td>
+			<!--<td>2</td>-->
+			<td>3</td>
+		</tr>
+		<tr>
+			<!--<td>4</td>-->
+			<!--<td>5</td>-->
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+</body>
+</html>

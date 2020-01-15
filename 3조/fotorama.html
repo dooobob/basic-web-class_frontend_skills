@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fotorama</title>
+	<!-- 플러그인 css 로딩 -->
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css" 
+	       rel="stylesheet">
+	<!-- jqurey 로딩 -->
+	<script src = "js/jquery-1.11.2.js"></script>
+	<!-- 플러그인 javascript 로딩 -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+
+		.container{
+			background-color: #6799FF;
+		}
+		.jumbotron{
+			background-color: #FFFFFF;
+		}
+		li{
+			font-size: 30px;
+		}
+		body{
+			background-color: #6799FF;
+			padding-top   : 70px;
+		}
+		img{
+			height: 350px;
+		}
+		.three{
+			font-size: 100px;
+			text-align: center;
+		}
+
+	</style>	
+
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar navbar-brand">3조 조별 과제</div>		
+	</div>
+
+
+	<!-- fotorama : 이미지 리스트 뷰 -->
+	<div class="fotorama" data-width           = "100%"       
+     					  data-height          = "600"   
+               			  data-fit             = "cover"
+               			  data-allowfullscreen = "true"
+               			  data-transition      = "slide"
+               			  data-clicktransition = "crossfade"
+               			  data-autoplay        = "true">
+		<div class="three">
+			<div class="jumbotron well">		
+				3조 fotorama
+			</div>
+		</div>
+
+		<!-- 김정훈 -->
+		<div class="container">
+			<div class="jumbotron well">		
+				<div class="media">
+					<div class="media-body">
+						<ul>
+							<li>이름 : 김정훈  </li>
+							<li>생일 : 8월 22일</li>
+							<li>취미<br/>
+								<input type="checkbox" name = "hobby" value = "TV"    checked = "checked"/> TV 시청   
+								<input type="checkbox" name = "hobby" value = "book"  checked = "checked"/> 독서      
+								<input type="checkbox" name = "hobby" value = "music" checked = "checked"/> 음악감상  
+								<input type="checkbox" name = "hobby" value = "movie" checked = "checked"/> 영화 시청 
+								<input type="checkbox" name = "hobby" value = "etc"   checked = "checked"/> 기타      
+								<br/>
+							</li>
+							<li>하고 싶은 말<br/>
+								<textarea name="comment" id="" cols="20" rows="5">금요일!!!</textarea>
+								<br/>
+							</li>
+						</ul>	
+					</div>
+
+					<div class="media-right">
+						<a href="#">
+							<img src="images/mil.png"/ class = "media-object img-rounded">
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+     <!--강민식-->
+		<div class="container">
+			<div class="jumbotron well">		
+				<div class="media">
+					<div class="media-body">
+						<ul>
+							<li>이름 : 강민식  </li>
+							<li>생일 : 8월 1일</li>
+							<li>취미<br/>
+								<input type="checkbox" name = "hobby" value = "TV"   /> TV 시청   
+								<input type="checkbox" name = "hobby" value = "book" /> 독서      
+								<input type="checkbox" name = "hobby" value = "music" checked = "checked"/> 음악감상  
+						
+								<input type="checkbox" name = "hobby" value = "movie" checked = "checked"/> 영화 시청 
+								<input type="checkbox" name = "hobby" value = "etc"  /> 기타      
+								<br/>
+							</li>
+							<li>하고 싶은 말<br/>
+								<textarea name="comment" id="" cols="20" rows="5">	내일토요일! </textarea>
+								<br/>
+							</li>
+						</ul>	
+					</div>
+
+					<div class="media-right">
+						<a href="#">
+							<img src="images/112.jpg"/ class = "media-object img-rounded">
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="jumbotron well">		
+				<div class="media">
+					<div class="media-body">
+						<ul>
+							<li>이름 : 김경태  </li>
+							<li>생일 : 9월 1일</li>
+							<li>취미<br/>
+								<input type="checkbox" name = "hobby" value = "TV"   /> TV 시청   
+								<input type="checkbox" name = "hobby" value = "book" /> 독서      
+								<input type="checkbox" name = "hobby" value = "music"/> 음악감상  
+						
+								<input type="checkbox" name = "hobby" value = "movie" checked = "checked"/> 영화 시청 
+								<input type="checkbox" name = "hobby" value = "etc"  checked = "checked"/> 게임      
+								<br/>
+							</li>
+							<li>하고 싶은 말<br/>
+								<textarea name="comment" id="" cols="20" rows="5"> 양꼬치엔 칭타오 </textarea>
+								<br/>
+							</li>
+						</ul>	
+					</div>
+
+					<div class="media-right">
+						<a href="#">
+							<img src="images/tao.jpg"/ class = "media-object img-rounded" style="width:300px">
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="jumbotron well">		
+				<div class="media">
+					<div class="media-body">
+						<ul>
+							<li>이름 : 박나단  </li>
+							<li>생일 : 1월 8일</li>
+							<li>취미<br/>
+								<input type="checkbox" name = "hobby" value = "game" checked = "checked"/> 게임   
+								<input type="checkbox" name = "hobby" value = "book" /> 독서      
+								<input type="checkbox" name = "hobby" value = "music" checked = "checked"/> 음악감상  
+								<input type="checkbox" name = "hobby" value = "movie" checked = "checked"/> 영화 시청 
+								<input type="checkbox" name = "hobby" value = "etc"  /> 기타      
+								<br/>
+							</li>
+							<li>하고 싶은 말<br/>
+								<textarea name="comment" id="" cols="20" rows="5">   주말에 뭐하지??</textarea>
+								<br/>
+							</li>
+						</ul>	
+					</div>
+
+					<div class="media-right">
+						<a href="#">
+							<img src="images/man.jpg"/ class = "media-object img-rounded">
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="jumbotron well">		
+				<div class="media">
+					<div class="media-body">
+						<ul>
+							<li>이름 : 김미진  </li>
+							<li>생일 : 1월 31일</li>
+							<li>취미<br/>
+								<input type="checkbox" name = "hobby" value = "TV"  /> TV 시청   
+								<input type="checkbox" name = "hobby" value = "book" checked = "checked" /> 독서      
+								<input type="checkbox" name = "hobby" value = "music" checked = "checked"/> 음악감상  
+						
+								<input type="checkbox" name = "hobby" value = "movie" checked = "checked" /> 영화 시청 
+								<input type="checkbox" name = "hobby" value = "etc"  /> 기타      
+								<br/>
+							</li>
+							<li>하고 싶은 말<br/>
+								<textarea name="comment" id="" cols="20" rows="5">HI!</textarea>
+								<br/>
+							</li>
+						</ul>	
+					</div>
+
+					<div class="media-right">
+						<a href="#">
+							<img src="images/cat.png"/ class = "media-object img-rounded">
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

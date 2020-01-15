@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_Position2.html</title>
+	<style>
+	.my-place{
+		/* 1. 마음데로 배치할 컨텐츠의 부모 요소의 position 속성 value 를 relative 로 지정한다. */
+		position: relative;
+		width: 500px;
+		height: 500px;
+		border: 1px solid red;
+		margin: 0 auto;
+	}
+	.my-place img{
+		/* 배치할 컨텐츠의 position 속성을 value 를 absolute 로 지정한다음 top, right, bottom, left 속성을 이용해서 원하는 위치에 배치할수 있다. */
+		position: absolute;
+		left: 200px;
+		top: 200px;
+	}
+	</style>
+</head>
+<body>
+	<h3>특정 div 나 문서 요소 안에서 어떤 컨텐츠를 원하는 위치에 배치하기</h3>
+	<div class="my-place">
+		<img src="images/kim1.png"/>
+	</div>
+	<input type="text"/>
+</body>
+</html>

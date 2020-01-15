@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Image.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<script src="js/holder.js"></script>
+	<style>
+		img{
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3>img-responsive를 적용한 반응형 이미지</h3>
+		<div class="row">
+			<div class="col-xs-3">
+				<img class="img-responsive" src="images/1.jpg"/>
+			</div>
+			<div class="col-xs-3">
+				<img class="img-responsive" src="images/3.jpg"/>
+			</div>
+			<div class="col-xs-3">
+				<img class="img-responsive" src="images/4.jpg"/>
+			</div>
+			<div class="col-xs-3">
+				<img class="img-responsive" src="images/5.jpg"/>
+			</div>
+		</div>
+		
+		<h3>img-rounded, img-circle, img-thumbnail 적용하기</h3>
+		<div class="row">
+			<div class="col-xs-3">
+				<img class="img-responsive" src="images/1.jpg"/>
+			</div>
+			<div class="col-xs-3">
+				<img class="img-responsive img-rounded" src="images/3.jpg"/>
+			</div>
+			<div class="col-xs-3">
+				<img class="img-responsive img-circle" src="images/4.jpg"/>
+			</div>
+			<div class="col-xs-3">
+				<img class="img-responsive img-thumbnail" src="images/5.jpg"/>
+			</div>
+		</div>
+	</div>
+
+	<hr/>
+	<div class="container">
+		<h3>holder.js 사용해보기</h3>
+		<img src="holder.js/200x200/sky"/>
+		<br/>
+		<img src="holder.js/100%x200/lava"/>
+
+		<h3>holder.js 예제</h3>
+		<div class="row">
+			<div class="col-xs-6 col-sm-3">
+				<img src="holder.js/100%x200/sky"/>
+			</div>
+			<div class="col-xs-6 col-sm-3">
+				<img src="holder.js/100%x200/sky"/>
+			</div>
+			<div class="col-xs-6 col-sm-3">
+				<img src="holder.js/100%x200/sky"/>
+			</div>
+			<div class="col-xs-6 col-sm-3">
+				<img src="holder.js/100%x200/sky"/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

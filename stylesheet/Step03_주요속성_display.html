@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_주요속성_display.html</title>
+	<style>
+	/* 다중 선택자를 이용해서 경계선 표시 */
+	div, span{
+		border: 1px solid red;
+	}
+	#none{
+		display: none; /* 안보이게 하기 */
+	}
+	.to-inline{
+		display: inline; /* 인라인 요소로 바꾸기 */
+	}
+	.to-block{
+		display: block;
+	}
+	.to-inline-block{
+		display: inline-block;
+	}
+	.box{
+		width:200px;
+		height:200px;
+	}
+	</style>
+</head>
+<body>
+	<h3>display 속성 사용하기</h3>
+	<div>div1</div>
+	<div id="none">div2</div>
+	<div>div3</div>
+	<span>span1</span>
+	<span>span2</span>
+	<span>span3</span>
+	<div class="to-inline">inline 요소가된 div1</div>
+	<div class="to-inline">inline 요소가된 div2</div>
+	<div class="to-inline">inline 요소가된 div3</div>
+	<span class="to-block">block 요소가 된 span1</span>
+	<span class="to-block">block 요소가 된 span2</span>
+	<span class="to-block">block 요소가 된 span3</span>
+
+	<h3>inline vs inline-block</h3>
+	<div>
+		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ab incidunt corrupti, delectus autem distinctio facilis, optio eum tempora, deserunt accusamus ex. Dolorem officiis atque aliquid beatae, officia animi perferendis.</span>
+	</div>
+	<div>
+		<span class="to-inline-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim qui neque nostrum explicabo iusto modi itaque, ratione, rem alias, fuga ex sint blanditiis ipsum! Laborum architecto reprehenderit omnis dolorum aliquid.</span>
+	</div>
+	<div>
+		<span class="to-inline-block box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus est maxime illum labore autem. Distinctio numquam esse repellendus facilis sapiente consequuntur vitae cum magni, eum omnis alias consectetur odit. Aut!</span>
+		<span class="to-inline-block box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum et inventore nostrum quam sed necessitatibus autem quod, facilis sint animi consectetur id, dolores officia deleniti mollitia amet, ratione sapiente. Nisi.</span>
+		<span class="to-inline-block box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime reprehenderit nesciunt qui dolore ad dolores aspernatur dignissimos aliquam itaque ea expedita magni saepe enim tempore hic optio, quis modi fuga.</span>
+	</div>	
+</body>
+</html>

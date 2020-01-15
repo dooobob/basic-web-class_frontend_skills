@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_mediaQuery.html</title>
+	<style>
+		p{
+			background-color: #cecece;
+		}
+		img{
+			width: 100px;
+		}
+		/* device 의 폭이 768 px 이상일 경우 적용할 css 정의하기 */
+		@media (min-width: 768px){/* media Query */
+			p{
+				background-color: yellow;
+			}
+			img{
+				width: 200px;
+			}
+		}
+		/* device 의 폭이 992px 이상일 경우 적용할 css 정의하기 */
+		@media (min-width: 992px){
+			p{
+				background-color: #ff00ff;
+			}
+			img{
+				width: 300px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, voluptatem molestiae culpa porro est consectetur fugiat officiis nobis soluta libero odio et nemo, architecto adipisci repellat illum eligendi eveniet dolores.</p>
+	<img src="images/image1.png"/>	
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_EachTest2.html</title>
+</head>
+<body>
+	<div>div1</div>
+	<div>div2</div>
+	<div>div3</div>
+	<div>div4</div>
+	<div>div5</div>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+	var count=0;
+	$("div").each(function(){
+		count++;
+		alert(count);
+		//this => 각각의 방에 들어있는 div 문서객체
+		$(this).css("background-color","yellow").text(count);
+	});
+	</script>
+</body>
+</html>

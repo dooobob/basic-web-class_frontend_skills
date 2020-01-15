@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>test03.html</title>
+        <style>
+            body {
+                padding-top: 50px;
+            }
+            .navbar {
+                background-color: #000;
+                color: #fff;
+                height: 50px;
+            }
+            .fixed-top {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            .fixed-bottom {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+            .spacer {
+                height: 1000px;
+                background-color: #cecece;
+            }
+            .navbar a {
+                color: #cecece;
+            }
+            .visible-xs {
+                display: none;
+            }
+            @media (max-width: 768px) {
+                .visible-xs {
+                    display: block;
+                }
+            }
+            .hidden-xs {
+                display: none;
+            }
+            @media(min-width: 768px) {
+                .hidden-xs {
+                    display: inline;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="navbar fixed-top">
+            navigation bar 입니다.
+            <a href="#" class="hidden-xs">Game</a>
+        </div>
+        <h3>media Query 테스트</h3>
+        <div class="spacer"></div>
+        <div class="navbar fixed-bottom visible-xs">
+            하단 navigation bar 입니다.
+            <a href="#">Game</a>
+        </div>
+    </body>
+</html>

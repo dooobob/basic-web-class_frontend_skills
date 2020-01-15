@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_EventHandler4.html</title>
+</head>
+<body>
+	<a href="http://daum.net">daum</a>
+	<br/>
+	<form action="loginAction" id="myForm">
+		아이디 <input type="text"/>
+		비밀번호 <input type="text"/>
+		<button type="submit">로그인</button>
+	</form>
+<script src="js/jquery-1.11.2.js"></script>
+<script>
+	$("a").click(function(){
+		//문서 요소에 발생하는 기본 이벤트 막기
+		return false;
+	});
+	$("#myForm").on("submit", function(){
+		//기본 이벤트를 막아서 폼 전송되지 않도록 
+		return false;
+	});
+</script>	
+</body>
+</html>

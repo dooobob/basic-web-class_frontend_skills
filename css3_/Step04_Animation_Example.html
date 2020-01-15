@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_Animation_Example.html</title>
+	<style>
+	.wrapper{
+		width:960px;
+		margin: 0 auto;
+	}
+	.box{
+		width: 800px;
+		height: 800px;
+		border: 1px solid red;
+	}
+	.box img{
+		width: 100px;
+	}
+
+	.move{
+		-webkit-animation: moveBottle 2s infinite linear;
+	}
+
+	@-webkit-keyframes moveBottle{
+		0%{
+			-webkit-transform: translateX(0px) translateY(0px);
+		}
+		1%{
+			-webkit-transform: translateX(0px) translateY(0px) rotate(90deg);
+		}
+		33%{
+			-webkit-transform: translateX(800px) translateY(0px) rotate(90deg);
+		}
+		34%{
+			-webkit-transform: translateX(800px) translateY(0px) rotate(180deg);
+		}
+		66%{
+			-webkit-transform: translateX(800px) translateY(800px) rotate(180deg);
+		}
+		67%{
+			-webkit-transform: translateX(800px) translateY(800px) rotate(315deg);
+		}
+		100%{
+			-webkit-transform: translateX(0px) translateY(0px) rotate(315deg);
+		}
+	}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<button id="startBtn">시작</button>
+	<div class="box">
+		<img src="images/bottle.png"/>
+	</div>	
+</div>
+<script src="js/jquery-1.11.2.js"></script>
+<script>
+	$("#startBtn").click(function(){
+		$(".box img").toggleClass("move");
+	});
+</script>
+</body>
+</html>
